@@ -1,0 +1,37 @@
+<%
+var oStyleSection = {
+%>
+
+${baseStyleSection}
+<%};%>
+
+<%
+//html body here
+var oBodySection = {
+%>
+<h1>
+
+</h1>
+<%};%>
+<%
+var oScriptSection={
+<script type="text/javascript">
+    $(function () {
+        seajs.use('{dir}/ZeyShop/top', function (a) {
+            a.init();
+        });
+    });
+</script>
+%>
+
+${baseScriptSection}
+<%};%>
+<%
+include("/views/_default.html",
+{
+baseTitle : baseTitle,
+baseStyleSection : oStyleSection,
+baseBodySection : oBodySection,
+baseScriptSection : oScriptSection
+}){}
+%>

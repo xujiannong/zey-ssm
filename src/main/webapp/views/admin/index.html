@@ -1,0 +1,36 @@
+﻿<%
+var oStyleSection = {
+%>
+
+
+<%};%>
+
+<%
+//html body here
+var oBodySection = {
+%>
+<h5>hello</h5>
+
+<%};%>
+<%
+var oScriptSection={
+%>
+<!-- Javascript -->
+<script type="text/javascript">
+    $(function () {
+        seajs.use('{dir}/admin/index', function (a) {
+            a.init();
+        });
+    });
+</script>
+<%};%>
+<%
+include("/views/_default.html",
+{
+baseTitle : "注册",
+baseStyleSection : oStyleSection,
+baseBodySection : oBodySection,
+baseScriptSection : oScriptSection
+}){}
+%>
+

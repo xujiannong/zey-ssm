@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${baseTitle}</title>
+    <script type="text/javascript">
+        var webRoot = "${@com.zey.sm.frame.util.UrlExpand.getWebRoot()}";
+        var seajsRoot = "${@com.zey.sm.frame.util.UrlExpand.getWebRoot()}";
+        if (!webRoot){
+            var path = '${@com.zey.sm.frame.util.UrlExpand.getContextPath()}';
+            webRoot = location.protocol+"//"+location.host+ path;
+            if (!(new RegExp("/"+"$").test(webRoot))) {
+                webRoot += "/";
+            }
+            seajsRoot = webRoot;
+        }
+    </script>
+    ${baseStyleSection}
+</head>
+<body class="header_sticky">
+${baseBodySection}
+<!-- wangle -->
+<link rel="stylesheet" href='${@com.zey.sm.frame.util.UrlExpand.setWebRoot("css/reset.css")}'>
+<!-- bootstrap style  -->
+<link rel="stylesheet" href='${@com.zey.sm.frame.util.UrlExpand.setWebRoot("css/bootstrap/css/bootstrap-responsive.css")}'>
+${baseScriptSection}
+<!-- j s -->
+<script src='${@com.zey.sm.frame.util.UrlExpand.setWebRoot("js/lib/jquery/jquery-1.8.3.min.js")}'></script>
+<script src='${@com.zey.sm.frame.util.UrlExpand.setWebRoot("js/lib/seajs/2.3.0/sea-debug.min.js")}'></script>
+<script src='${@com.zey.sm.frame.util.UrlExpand.setWebRoot("js/config.js")}'></script>
+${baseStyleSection}
+</body>
+</html>

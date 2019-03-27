@@ -1,0 +1,10 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 400;
+    background-color: #fff;
+    color: #656565;
+    overflow: hidden;
+    position: relative;
+}

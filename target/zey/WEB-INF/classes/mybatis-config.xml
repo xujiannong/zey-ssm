@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <!-- 防止插入null值时，mybatis映射错误 -->
+        <setting name="jdbcTypeForNull" value="NULL"/>
+        <!-- 指定使用log4j作为日志实现框架 -->
+        <setting name="logImpl" value="LOG4J"/>
+        <!-- mybatis自动映射驼峰法变量到数据库字段（下划线分隔） -->
+        <setting name="mapUnderscoreToCamelCase" value="true" />
+    </settings>
+</configuration>
